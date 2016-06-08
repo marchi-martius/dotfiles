@@ -1,0 +1,31 @@
+#!/bin/bash
+
+dotfiles_dir="$HOME/dotfiles"
+backup_dir="$HOME/dotfiles-bck"
+files="bash_profile bashrc config/nvim emacs.d/init.el emacs.d/etc emacs.d/lisp gitconfig gitignore_global screenrc vimrc"
+
+for file in $files
+do
+    if [ -d "$HOME/.$(dirname $file)" ] && [ ! -e "$backup_dir/$(dirname $file)" ]
+    then
+        mkdir -p "$backup_dir/$(dirname $file)"
+    fi
+
+    if [ -d "$dotfiles_dir/$(dirname $file)" ] && [ ! -e "$HOME/.$(dirname $file)" ]
+    then
+        mkdir -p "$HOME/.$(dirname $file)"
+    fi
+
+    if [ -e "$HOME/.$file" ]
+    then
+        mkdir -p "$backup_dir"
+        [ -d "$backup_dir/$file" ] && rm -r "$backup_dir/$file"
+        mv "$HOME/.$file" "$backup_dir/$file"
+    fi
+
+    if [ -e "$dotfiles_dir/$file" ]
+    then
+        [ -d "$HOME/.$file" ] && rm -r "$HOME/.$file"
+        ln -s "$dotfiles_dir/$file" "$HOME/.$file"
+    fi
+done

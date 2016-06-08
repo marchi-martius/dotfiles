@@ -1,0 +1,18 @@
+[user]
+	name = Mark Volosiuk
+	email = marchi.martius@gmail.com
+[core]
+	excludesfile = /Users/marchi/.gitignore_global
+	editor = emacs
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[heroku]
+	account = main
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
