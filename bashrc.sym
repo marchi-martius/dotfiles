@@ -1,15 +1,18 @@
-if [ -f $(brew --prefix)/etc/bash_completion ]
+if [ -f /usr/share/bash-completion/bash_completion ]
 then
-    source $(brew --prefix)/etc/bash_completion
+    source /usr/share/bash-completion/bash_completion
 fi
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+if [ -f /usr/share/git/completion/git-prompt.sh ]
+then
+    source /usr/share/git/completion/git-prompt.sh
+fi
+if [ -f /usr/share/chruby/chruby.sh ]
+then
+    source /usr/share/chruby/chruby.sh
+    source /usr/share/chruby/auto.sh
+fi
+
 complete -C aws_completer aws
-
-#BASE16_SHELL="$HOME/.config/base16-ocean.dark.sh"
-#[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
-export LANG='ru_RU.UTF-8'
 
 # Reset
 Color_Off='\[\e[0m\]'       # Text Reset
@@ -40,10 +43,16 @@ function __ruby_version {
     version="${version%% *}"
     echo "$version"
 }
-PS1="${BGreen}\u@\h"
-PS1+="${BBlue}:\W "
+PS1="${Green}\u@\h"
+PS1+="${Blue}:\W "
 PS1+="${Yellow}"
 PS1+='$(__git_ps1 "(%s)")'
 PS1+="${Color_Off}\$ "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias ls="ls --color=auto"
+
+PATH=$HOME/.local/bin:$PATH
+WINEPREFIXES="$HOME/.local/share/wineprefixes"
+export PATH WINEPREFIXES

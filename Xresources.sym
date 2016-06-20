@@ -1,0 +1,60 @@
+! Fonts
+Xft.dpi: 96
+Xft.lcdfilter: lcddefault
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.autohint: false
+Xft.rgba: rgb
+Xft.antialias: true
+
+! Terminal
+URxvt.font:         xft:m+ 1m:size=10:Regular
+URxvt.cursorBlink:  false
+URxvt.scrollBar:    false
+URxvt.saveLines:    4096
+
+! Rofi
+rofi.font: m+ 1p 10
+rofi.color-enabled: true
+rofi.color-window: #f9fafc, #aa421b, #757575
+rofi.color-normal: #f9fafc, #555555, #e3e4e5, #729abd, #f9fafc
+rofi.color-active: #f9fafc, #729abd, #e3e4e5, #a4cee2, #f9fafc
+rofi.color-urgent: #f9fafc, #aa421b, #e3e4e5, #aa421b, #f9fafc
+
+! special
+*.foreground:   #555555
+*.background:   #f9fafc
+*.cursorColor:  #555555
+
+! black
+*.color0:       #555555
+*.color8:       #757575
+
+! red
+*.color1:       #aa421b
+*.color9:       #ff9b8d
+
+! green
+*.color2:       #2f7e43
+*.color10:      #59b377
+
+! yellow
+*.color3:       #b99c53
+*.color11:      #debf6d
+
+! blue
+*.color4:       #729abd
+*.color12:      #a4cee2
+
+! magenta
+*.color5:       #9a3072
+*.color13:      #c85da0
+
+! cyan
+*.color6:       #578882
+*.color14:      #55bdb0
+
+! white
+*.color7:       #e3e4e5
+*.color15:      #f9fafc
+

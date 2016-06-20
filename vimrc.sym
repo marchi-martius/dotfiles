@@ -1,9 +1,7 @@
 set nocompatible
 
-set background=dark
+set background=light
 
-set number
-set numberwidth=6
 set ruler
 set cursorline
 
@@ -15,7 +13,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoindent
-set laststatus=2
 
 set history=10000
 set showcmd
@@ -34,11 +31,6 @@ set winwidth=85
 set colorcolumn=81
 
 set encoding=utf-8
-
-set modeline
-set modelines=3
-
-set stal=2
 
 syntax on
 

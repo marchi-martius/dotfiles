@@ -1,0 +1,7 @@
+#! /bin/bash
+
+PANEL_FIFO=/tmp/panel-fifo
+PANEL_HEIGHT=24
+PANEL_FONT="xft:m+ 1p:size=10:Regular"
+PANEL_WM_NAME=bspwm_panel
+export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
