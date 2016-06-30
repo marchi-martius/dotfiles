@@ -1,0 +1,7 @@
+set from="mark.volosiuk@gmail.com"
+
+set folder=~/.mail/ai
+
+set spoolfile=+Inbox
+set postponed=+[Gmail]/Drafts
+unset record

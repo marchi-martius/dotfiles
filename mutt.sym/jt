@@ -1,0 +1,7 @@
+set from="mvo@jetthoughts.com"
+
+set folder=~/.mail/jt
+
+set spoolfile=+Inbox
+set postponed=+[Gmail]/Drafts
+unset record

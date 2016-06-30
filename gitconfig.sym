@@ -3,7 +3,7 @@
 	email = marchi.martius@gmail.com
 [core]
 	excludesfile = /Users/marchi/.gitignore_global
-	editor = emacs
+	editor = vim
 [credential]
 	helper = osxkeychain
 [push]

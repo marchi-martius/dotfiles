@@ -11,13 +11,16 @@ then
     source /usr/share/chruby/chruby.sh
     source /usr/share/chruby/auto.sh
 fi
+if [ -f "$HOME/.secretenv" ]
+then
+    source "$HOME/.secretenv"
+fi
 
 complete -C aws_completer aws
 
 # Reset
 Color_Off='\[\e[0m\]'       # Text Reset
 
-# Plain Colors
 Black='\[\e[0;30m\]'        # Black
 Red='\[\e[0;31m\]'          # Red
 Green='\[\e[0;32m\]'        # Green
@@ -26,6 +29,15 @@ Blue='\[\e[0;34m\]'         # Blue
 Purple='\[\e[0;35m\]'       # Purple
 Cyan='\[\e[0;36m\]'         # Cyan
 White='\[\e[0;37m\]'        # White
+
+LightBlack='\[\e[0;90m\]'
+LightRed='\[\e[0;91m\]'
+LightGreen='\[\e[0;92m\]'
+LightYellow='\[\e[0;93m\]'
+LightBlue='\[\e[0;94m\]'
+LightPurple='\[\e[0;95m\]'
+LightCyan='\[\e[0;96m\]'
+LightWhite='\[\e[0;97m\]'
 
 # Bold
 BBlack='\[\e[1;30m\]'       # Black
@@ -43,9 +55,9 @@ function __ruby_version {
     version="${version%% *}"
     echo "$version"
 }
-PS1="${Green}\u@\h"
-PS1+="${Blue}:\W "
-PS1+="${Yellow}"
+PS1="${LightGreen}\u@\h"
+PS1+="${LightBlue}:\W "
+PS1+="${LightYellow}"
 PS1+='$(__git_ps1 "(%s)")'
 PS1+="${Color_Off}\$ "
 
@@ -53,6 +65,12 @@ PS1+="${Color_Off}\$ "
 
 alias ls="ls --color=auto"
 
-PATH=$HOME/.local/bin:$PATH
+GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
+GEM_PATH=$GEM_HOME
+PATH=$PATH:$GEM_HOME/bin
+
+PATH=$HOME/.local/bin:/usr/local/heroku/bin:$PATH
 WINEPREFIXES="$HOME/.local/share/wineprefixes"
-export PATH WINEPREFIXES
+EDITOR=vim
+export PATH WINEPREFIXES EDITOR
+

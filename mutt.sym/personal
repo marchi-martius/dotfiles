@@ -1,0 +1,7 @@
+set from="marchi.martius@gmail.com"
+
+set folder=~/.mail/personal
+
+set spoolfile=+Inbox
+set postponed=+[Gmail]/Drafts
+unset record

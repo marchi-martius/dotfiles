@@ -1,6 +1,7 @@
 set nocompatible
 
-set background=light
+colorscheme marchi
+set background=dark
 
 set ruler
 set cursorline
@@ -45,6 +46,8 @@ if has("autocmd")
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
   autocmd! BufRead,BufNewFile Guardfile setfiletype ruby
+
+  autocmd BufRead,BufNewFile,BufEnter */.mutt/* setfiletype muttrc
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;

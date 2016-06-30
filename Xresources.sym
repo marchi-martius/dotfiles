@@ -8,53 +8,65 @@ Xft.rgba: rgb
 Xft.antialias: true
 
 ! Terminal
-URxvt.font:         xft:m+ 1m:size=10:Regular
-URxvt.cursorBlink:  false
-URxvt.scrollBar:    false
-URxvt.saveLines:    4096
+URxvt.font:             xft:m+ 1mn:size=10:Regular
+URxvt.cursorBlink:      false
+URxvt.scrollBar:        false
+URxvt.saveLines:        4096
+URxvt.internalBorder:   12
 
 ! Rofi
 rofi.font: m+ 1p 10
+
+! rofi.color-enabled: true
+! rofi.color-window: #f9fafc, #aa421b, #757575
+! rofi.color-normal: #f9fafc, #555555, #e3e4e5, #729abd, #f9fafc
+! rofi.color-active: #f9fafc, #729abd, #e3e4e5, #a4cee2, #f9fafc
+! rofi.color-urgent: #f9fafc, #aa421b, #e3e4e5, #aa421b, #f9fafc
+
 rofi.color-enabled: true
-rofi.color-window: #f9fafc, #aa421b, #757575
-rofi.color-normal: #f9fafc, #555555, #e3e4e5, #729abd, #f9fafc
-rofi.color-active: #f9fafc, #729abd, #e3e4e5, #a4cee2, #f9fafc
-rofi.color-urgent: #f9fafc, #aa421b, #e3e4e5, #aa421b, #f9fafc
+rofi.color-window: #2b2c28, #559a6a, #2b2c28
+rofi.color-normal: #2b2c28, #a4a6ab, #2b2c28, #559a6a, #dbdde2
+rofi.color-active: #2b2c28, #6a8bca, #2b2c28, #6a8bca, #dbdde2
+rofi.color-urgent: #2b2c28, #c4756e, #2b2c28, #c4756e, #dbdde2
+
+! Emacs
+emacs.FontBackend: xft
+emacs.font: M+ 1mn-10
 
 ! special
-*.foreground:   #555555
-*.background:   #f9fafc
-*.cursorColor:  #555555
+*.foreground:   #a4a6ab
+*.background:   #2d2c28
+*.cursorColor:  #a4a6ab
 
 ! black
-*.color0:       #555555
-*.color8:       #757575
+*.color0:       #5b5955
+*.color8:       #707277
 
 ! red
-*.color1:       #aa421b
-*.color9:       #ff9b8d
+*.color1:       #c4756e
+*.color9:       #f6a299
 
 ! green
-*.color2:       #2f7e43
-*.color10:      #59b377
+*.color2:       #559a6a
+*.color10:      #82c896
 
 ! yellow
-*.color3:       #b99c53
-*.color11:      #debf6d
+*.color3:       #9b8a4b
+*.color11:      #cab775
 
 ! blue
-*.color4:       #729abd
-*.color12:      #a4cee2
+*.color4:       #6a8dca
+*.color12:      #98bbfb
 
 ! magenta
-*.color5:       #9a3072
-*.color13:      #c85da0
+*.color5:       #b577ac
+*.color13:      #e5a4db
 
 ! cyan
-*.color6:       #578882
-*.color14:      #55bdb0
+*.color6:       #019baa
+*.color14:      #53cad9
 
 ! white
-*.color7:       #e3e4e5
-*.color15:      #f9fafc
+*.color7:       #dbdde2
+*.color15:      #f7f9ff
 

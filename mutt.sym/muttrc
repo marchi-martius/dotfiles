@@ -1,0 +1,31 @@
+set header_cache=~/.cache/mutt
+set mbox_type=Maildir
+
+set realname='Mark Volosiuk'
+set edit_headers=yes
+set use_from=yes
+set envelope_from=yes
+
+set sendmail="/usr/bin/msmtp"
+
+set sort=threads
+set sort_aux="last-date-received"
+
+set mailcap_path=~/.mutt/mailcap
+auto_view text/html
+alternative_order text/plain text/html
+
+set arrow_cursor
+
+source "~/.mutt/colors"
+source "~/.mutt/macros"
+
+source "~/.mutt/jt"
+folder-hook $folder 'source ~/.mutt/jt'
+
+source "~/.mutt/ai"
+folder-hook ~/.mail/ai/* 'source ~/.mutt/ai'
+
+source "~/.mutt/personal"
+folder-hook ~/.mail/personal/* 'source ~/.mutt/personal'
+
