@@ -74,3 +74,4 @@ WINEPREFIXES="$HOME/.local/share/wineprefixes"
 EDITOR=vim
 export PATH WINEPREFIXES EDITOR
 
+eval $(keychain --eval --quiet id_rsa)

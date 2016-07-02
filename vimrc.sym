@@ -28,8 +28,8 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set wildmode=longest,list
 set wildmenu
 
-set winwidth=85
-set colorcolumn=81
+set winwidth=110
+set colorcolumn=111
 
 set encoding=utf-8
 
