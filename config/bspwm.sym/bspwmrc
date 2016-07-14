@@ -3,8 +3,8 @@
 sxhkd &
 panel &
 
-bspc config border_width  3
-bspc config window_gap    6
+bspc config border_width   3
+bspc config window_gap    12
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -22,5 +22,5 @@ bspc rule -a Gimp desktop=media state=floating follow=on
 bspc rule -a MPlayer desktop=media state=floating follow=on
 bspc rule -a Jumanji desktop=web follow=on
 bspc rule -a Firefox desktop=web follow=on
-bspc rule -a Steam.exe desktop=game state=floating
+bspc rule -a Wine desktop=game manage=off
 bspc rule -a URxvt:mutt desktop=misc

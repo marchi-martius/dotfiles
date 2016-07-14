@@ -16,6 +16,11 @@ then
     source "$HOME/.secretenv"
 fi
 
+if [ -f "$HOME/.config/panel/default" ]
+then
+    source "$HOME/.config/panel/default"
+fi
+
 complete -C aws_completer aws
 
 # Reset

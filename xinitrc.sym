@@ -36,5 +36,5 @@ fi
 xset +fp /usr/share/fonts/local
 xsetroot -cursor_name left_ptr
 
-feh --bg-scale "$HOME/warehouse/pictures/wallpapers/stripes.jpg"
+feh --bg-scale "$HOME/warehouse/pictures/wallpapers/dresden.jpg"
 exec bspwm

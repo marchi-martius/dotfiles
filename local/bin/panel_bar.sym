@@ -85,5 +85,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-    echo "%{l}%{O9}${wm}%{c}${title}%{r}${sys}%{O9}"
+    echo "%{l}%{O12}${wm}%{c}${title}%{r}${sys}%{O12}"
 done
