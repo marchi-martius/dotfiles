@@ -16,6 +16,14 @@ while read -r line ; do
 			# xtitle output
 			title="%{F$COLOR_TITLE_FG}%{B$COLOR_TITLE_BG} ${line#?} %{B-}%{F-}"
 			;;
+        M*)
+            # Unread mail
+			mail="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG}%{A:email:} ${line#?} %{A}%{B-}%{F-}"
+            ;;
+        L*)
+            # Current keyboard layout
+			layout="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}"
+            ;;
 		W*)
 			# bspwm's state
 			wm=""
@@ -85,5 +93,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-    echo "%{l}%{O12}${wm}%{c}${title}%{r}${sys}%{O12}"
+    echo "%{l}%{O12}${wm}%{c}${title}%{r}${mail} | ${layout} | ${sys}%{O12}"
 done

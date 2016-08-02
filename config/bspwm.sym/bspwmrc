@@ -22,5 +22,7 @@ bspc rule -a Gimp desktop=media state=floating follow=on
 bspc rule -a MPlayer desktop=media state=floating follow=on
 bspc rule -a Jumanji desktop=web follow=on
 bspc rule -a Firefox desktop=web follow=on
-bspc rule -a Wine desktop=game manage=off
+bspc rule -a Wine:Steam.exe desktop=game
 bspc rule -a URxvt:mutt desktop=misc
+bspc rule -a Skype desktop=misc
+bspc rule -a Steam desktop=game
