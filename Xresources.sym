@@ -9,14 +9,14 @@ Xft.antialias: true
 
 ! Terminal
 ! URxvt.font:             xft:m+ 1mn:size=10:Regular
-URxvt.font:             xft:Iosevka:size=10:Regular
+URxvt.font:             xft:Iosevka:size=11:Regular
 URxvt.cursorBlink:      false
 URxvt.scrollBar:        false
 URxvt.saveLines:        4096
 URxvt.internalBorder:   12
 
 ! Rofi
-rofi.font: Iosevka 10
+rofi.font: Iosevka 11
 
 ! rofi.color-enabled: true
 ! rofi.color-window: #f9fafc, #aa421b, #757575
@@ -32,7 +32,7 @@ rofi.color-urgent: #2b2c28, #c4756e, #2b2c28, #c4756e, #dbdde2
 
 ! Emacs
 emacs.FontBackend: xft
-emacs.font: Iosevka-10
+emacs.font: Iosevka-11
 
 ! special
 *.foreground:   #a4a6ab
