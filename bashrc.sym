@@ -79,4 +79,5 @@ WINEPREFIXES="$HOME/.local/share/wineprefixes"
 EDITOR=vim
 export PATH WINEPREFIXES EDITOR
 
-eval $(keychain --eval --quiet id_rsa)
+SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_AUTH_SOCK
