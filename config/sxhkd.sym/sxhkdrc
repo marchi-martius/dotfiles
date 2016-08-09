@@ -145,5 +145,5 @@ super + shift + r
 super + shift + f
     firefox
 
-super + {\,,.}
-    ponymix {decrease,increase} 3
+super + shift + {u,d}
+    ponymix {increase,decrease} 3
