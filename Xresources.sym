@@ -1,4 +1,3 @@
-! Fonts
 Xft.dpi: 96
 Xft.lcdfilter: lcddefault
 Xft.hinting: true
@@ -7,32 +6,18 @@ Xft.autohint: false
 Xft.rgba: rgb
 Xft.antialias: true
 
-! Terminal
-! URxvt.font:             xft:m+ 1mn:size=10:Regular
-URxvt.font:             xft:Iosevka:size=11:Regular
+URxvt.font:             xft:Iosevka:size=11:style=Regular
 URxvt.cursorBlink:      false
 URxvt.scrollBar:        false
 URxvt.saveLines:        4096
 URxvt.internalBorder:   12
 
-! Rofi
-rofi.font: Iosevka 11
-
-! rofi.color-enabled: true
-! rofi.color-window: #f9fafc, #aa421b, #757575
-! rofi.color-normal: #f9fafc, #555555, #e3e4e5, #729abd, #f9fafc
-! rofi.color-active: #f9fafc, #729abd, #e3e4e5, #a4cee2, #f9fafc
-! rofi.color-urgent: #f9fafc, #aa421b, #e3e4e5, #aa421b, #f9fafc
-
+rofi.font: monospace 10
 rofi.color-enabled: true
 rofi.color-window: #2b2c28, #559a6a, #2b2c28
 rofi.color-normal: #2b2c28, #a4a6ab, #2b2c28, #559a6a, #dbdde2
 rofi.color-active: #2b2c28, #6a8bca, #2b2c28, #6a8bca, #dbdde2
 rofi.color-urgent: #2b2c28, #c4756e, #2b2c28, #c4756e, #dbdde2
-
-! Emacs
-emacs.FontBackend: xft
-emacs.font: Iosevka-11
 
 ! special
 *.foreground:   #a4a6ab
