@@ -3,7 +3,7 @@
 sxhkd &
 panel &
 
-bspc config border_width   3
+bspc config border_width   6
 bspc config window_gap    12
 
 bspc config split_ratio          0.52
@@ -16,13 +16,20 @@ bspc config normal_border_color   '#2b2c28'
 bspc config active_border_color   '#559a6a'
 bspc config focused_border_color  '#559a6a'
 
-bspc monitor -d term web game media misc
+bspc monitor -d Term Web Game Media Misc
 
-bspc rule -a Gimp desktop=media state=floating follow=on
-bspc rule -a MPlayer desktop=media state=floating follow=on
-bspc rule -a Jumanji desktop=web follow=on
-bspc rule -a Firefox desktop=web follow=on
-bspc rule -a Wine:Steam.exe desktop=game
-bspc rule -a URxvt:mutt desktop=misc
-bspc rule -a Skype desktop=misc
-bspc rule -a Steam desktop=game
+bspc rule -a Firefox desktop=Web follow=on
+bspc rule -a chromium desktop=Web follow=on
+
+bspc rule -a Steam desktop=Game
+bspc rule -a Wine:Steam.exe desktop=Game
+bspc rule -a dota2 desktop=Game
+bspc rule -a wesnoth desktop=Game state=monocle
+bspc rule -a Wine:explorer.exe desktop=Game
+
+bspc rule -a Gimp desktop=Media state=floating follow=on
+bspc rule -a MPlayer desktop=Media state=floating follow=on
+bspc rule -a Ario desktop=Media state=floating follow=on
+
+bspc rule -a URxvt:mutt desktop=Misc
+bspc rule -a Skype desktop=Misc
