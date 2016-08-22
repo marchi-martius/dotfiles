@@ -1,4 +1,6 @@
 emacs.d.sym/elpa/
+emacs.d.sym/var/
+emacs.d.sym/session.*
 ac-comphist.dat
 projectile-bookmarks.eld
 vim.sym/.netrwhist
