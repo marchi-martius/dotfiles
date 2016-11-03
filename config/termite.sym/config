@@ -1,0 +1,99 @@
+[options]
+font = monospace 12
+
+# marchi dark
+# [colors]
+# foreground = #a4a6ab
+# background = #2d2c28
+# cursor = #a4a6ab
+# color0 = #5b5955
+# color8 = #707277
+# color1 = #c4756e
+# color9 = #f6a299
+# color2 = #559a6a
+# color10 = #82c896
+# color3 = #9b8a4b
+# color11 = #cab775
+# color4 = #6a8dca
+# color12 = #98bbfb
+# color5 = #b577ac
+# color13 = #e5a4db
+# color6 = #019baa
+# color14 = #53cad9
+# color7 = #dbdde2
+# color15 = #f7f9ff
+
+# baskerville - ivory dark
+# [colors]
+# 
+# # special
+# foreground      = #a4a6ab
+# foreground_bold = #a4a6ab
+# cursor          = #a4a6ab
+# background      = #2d2c28
+# 
+# # black
+# color0  = #5b5955
+# color8  = #707277
+# 
+# # red
+# color1  = #c4756e
+# color9  = #f6a299
+# 
+# # green
+# color2  = #559a6a
+# color10 = #82c896
+# 
+# # yellow
+# color3  = #9b8a4b
+# color11 = #cab775
+# 
+# # blue
+# color4  = #6a8dca
+# color12 = #98bbfb
+# 
+# # magenta
+# color5  = #b577ac
+# color13 = #e5a4db
+# 
+# # cyan
+# color6  = #019baa
+# color14 = #53cad9
+# 
+# # white
+# color7  = #dbdde2
+# color15 = #f7f9ff
+[colors]
+# Base16 OceanicNext
+# Scheme: https://github.com/voronianski/oceanic-next-color-scheme
+
+foreground      = #C0C5CE
+foreground_bold = #C0C5CE
+cursor          = #C0C5CE
+background      = #1B2B34
+
+# 16 color space
+color0  = #1B2B34
+color1  = #EC5f67
+color2  = #99C794
+color3  = #FAC863
+color4  = #6699CC
+color5  = #C594C5
+color6  = #5FB3B3
+color7  = #C0C5CE
+color8  = #65737E
+color9  = #EC5f67
+color10 = #99C794
+color11 = #FAC863
+color12 = #6699CC
+color13 = #C594C5
+color14 = #5FB3B3
+color15 = #D8DEE9
+
+# 256 color space
+color16 = #F99157
+color17 = #AB7967
+color18 = #343D46
+color19 = #4F5B66
+color20 = #A7ADBA
+color21 = #CDD3DE

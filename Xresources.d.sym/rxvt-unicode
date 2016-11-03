@@ -1,0 +1,12 @@
+URxvt.cursorBlink:      false
+URxvt.scrollBar:        false
+URxvt.saveLines:        4096
+URxvt.internalBorder:   12
+URxvt.letterSpace:      true
+
+URxvt.perl-ext: default,url-select,font-size,clipboard,background
+
+URxvt.url-select.launcher:  firefox
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search

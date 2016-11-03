@@ -1,0 +1,4 @@
+#! /bin/bash
+
+echo "L$(xkb-switch)"
+xkb-switch -W | while read line; do echo "L${line}"; done

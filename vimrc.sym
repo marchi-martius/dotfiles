@@ -2,8 +2,10 @@ set nocompatible
 
 execute pathogen#infect()
 
-colorscheme marchi
-set background=dark
+if filereadable(expand("~/.vimrc_background"))
+    let base16colorspace=256
+    source ~/.vimrc_background
+endif
 
 set ruler
 set cursorline
@@ -31,13 +33,10 @@ set wildmode=longest,list
 set wildmenu
 
 set winwidth=110
-set colorcolumn=111
 
 set encoding=utf-8
 
 syntax on
-
-let g:ctrlp_max_files=0
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -65,3 +64,60 @@ endif
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+nnoremap <Leader>t :FZF<cr>
+
+" Open files in horizontal split
+nnoremap <silent> <Leader>s :call fzf#run({
+            \   'down': '40%',
+            \   'sink': 'botright split' })<CR>
+
+" Open files in vertical horizontal split
+nnoremap <silent> <Leader>v :call fzf#run({
+\   'right': winwidth('.') / 2,
+\   'sink':  'vertical botright split' })<CR>
+
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader><Enter> :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
+
+function! s:tags_sink(line)
+  let parts = split(a:line, '\t\zs')
+  let excmd = matchstr(parts[2:], '^.*\ze;"\t')
+  execute 'silent e' parts[1][:-2]
+  let [magic, &magic] = [&magic, 0]
+  execute excmd
+  let &magic = magic
+endfunction
+
+function! s:tags()
+  if empty(tagfiles())
+    echohl WarningMsg
+    echom 'Preparing tags'
+    echohl None
+    call system('ctags -R')
+  endif
+
+  call fzf#run({
+  \ 'source':  'cat '.join(map(tagfiles(), 'fnamemodify(v:val, ":S")')).
+  \            '| grep -v ^!',
+  \ 'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
+  \ 'down':    '40%',
+  \ 'sink':    function('s:tags_sink')})
+endfunction
+
+command! Tags call s:tags()

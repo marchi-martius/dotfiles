@@ -1,3 +1,7 @@
+getXresColor() {
+    echo -n "$( xrdb -query | grep "\*.$1:" | grep -oE "#[a-zA-Z0-9]{6}" )";
+}
+
 #
 # wm independent hotkeys
 #
@@ -8,7 +12,7 @@ super + Return
 
 # program launcher
 super + space
-	rofi -show run
+	app-launcher
 
 # make sxhkd reload its configuration files:
 super + Escape

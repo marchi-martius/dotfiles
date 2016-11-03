@@ -12,6 +12,15 @@ then
     source /usr/share/chruby/chruby.sh
     source /usr/share/chruby/auto.sh
 fi
+if [ -f /usr/share/fzf/key-bindings.bash ]
+then
+    source /usr/share/fzf/key-bindings.bash
+    source /usr/share/fzf/completion.bash
+fi
+if [ -f /usr/share/base16/shell/base16-default.light.sh ]
+then
+    source /usr/share/base16/shell/base16-default.light.sh
+fi
 if [ -f "$HOME/.secretenv" ]
 then
     source "$HOME/.secretenv"
@@ -29,6 +38,13 @@ then
     source /etc/profile.d/vte.sh
     __vte_prompt_command
 fi
+if [[ $TERMINIX_ID ]]
+then
+    source /etc/profile.d/vte.sh
+fi
+
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Autocompletion
 complete -C aws_completer aws
@@ -40,13 +56,19 @@ export GEM_HOME GEM_PATH
 
 PATH=$HOME/.local/bin:/usr/local/heroku/bin:$PATH:$GEM_HOME/bin
 EDITOR=vim
-export PATH EDITOR
+TERMINAL=urxvt
+BROWSER=firefox
+export PATH EDITOR TERMINAL BROWSER
 
 WINEPREFIXES="$HOME/.local/share/wineprefixes"
 export WINEPREFIXES
 
-SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export SSH_AUTH_SOCK
+# Add default SSH key to ring
+if [ -z $SSH_AUTH_SOCK ]
+then
+    eval `ssh-agent -s`
+    ssh-add
+fi
 
 # Aliases
 alias ls="ls --color=auto"
@@ -58,8 +80,11 @@ alias gpl="git pull"
 alias grt="git reset"
 alias grb="git rebase"
 alias gmg="git merge"
+alias glg="git log --decorate --graph --oneline"
+alias gst="git status"
 
 alias hpr="hub pull-request"
 
 alias ai="cd ~/src/agentinbox/agentinbox"
-alias bld="cd ~/builds"
+alias sbs="cd ~/src/marchi-martius/superbookshop"
+alias bld="cd ~/src/cower"

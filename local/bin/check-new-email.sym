@@ -1,0 +1,19 @@
+#!/bin/bash
+
+MAILBOXES=( personal jt ai )
+
+while true
+do
+    result=''
+    for i in ${!MAILBOXES[*]}
+    do
+        mailbox="${MAILBOXES[$i]}"
+        path="$HOME/.mail/$mailbox/Inbox/new"
+        count="$(find "$path" -type f | wc -l)"
+        [ "$count" -gt 0 ] && result="$result,$mailbox: $count"
+    done
+    echo "M${result#,*}"
+
+    sleep 30s
+done
+

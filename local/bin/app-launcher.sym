@@ -1,0 +1,21 @@
+#! /bin/sh
+
+getXresColor() {
+    echo -n "$( xrdb -query | grep "\*$1:" | grep -oE "#[a-zA-Z0-9]{6}" )";
+}
+
+background="$(getXresColor background)"
+foreground="$(getXresColor foreground)"
+red="$(getXresColor color1)"
+green="$(getXresColor color2)"
+blue="$(getXresColor color4)"
+white="$(getXresColor color7)"
+
+rofi -show run -fullscreen \
+    -opacity 87 \
+    -padding 400 \
+    -font "sans 20" \
+    -color-window "$background, $background, $background" \
+    -color-normal "$background, $foreground, $background, $blue, $foreground" \
+    -color-active "$background, $green, $background, $green, $foreground" \
+    -color-urgent "$background, $red, $background, $red, $foreground"
