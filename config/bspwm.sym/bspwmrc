@@ -38,3 +38,6 @@ bspc rule -a Wine:Steam.exe desktop=Game
 bspc rule -a dota2 desktop=Game
 bspc rule -a wesnoth desktop=Game state=monocle
 bspc rule -a Wine:explorer.exe desktop=Game
+bspc rule -a nwn2main.exe desktop=Game state=floating
+
+bspc rule -a Transmission-gtk desktop=Misc

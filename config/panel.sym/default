@@ -2,7 +2,7 @@
 
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=28
-PANEL_FONT="sans:size=10:Regular"
+PANEL_FONT="Lato:size=10:style=Bold"
 PANEL_WM_NAME=bspwm_panel
 
 export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME

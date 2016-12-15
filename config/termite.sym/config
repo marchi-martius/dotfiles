@@ -1,37 +1,38 @@
 [options]
-font = monospace 12
+font = monospace 10
+
 
 [colors]
-# Base16 Default
-# Scheme: Chris Kempson (http://chriskempson.com)
+# Base16 OceanicNext
+# Scheme: https://github.com/voronianski/oceanic-next-color-scheme
 
-foreground      = #383838
-foreground_bold = #383838
-cursor          = #383838
-background      = #f8f8f8
+foreground      = #C0C5CE
+foreground_bold = #C0C5CE
+cursor          = #C0C5CE
+background      = #1B2B34
 
 # 16 color space
-color0  = #181818
-color1  = #ab4642
-color2  = #a1b56c
-color3  = #f7ca88
-color4  = #7cafc2
-color5  = #ba8baf
-color6  = #86c1b9
-color7  = #d8d8d8
-color8  = #585858
-color9  = #ab4642
-color10 = #a1b56c
-color11 = #f7ca88
-color12 = #7cafc2
-color13 = #ba8baf
-color14 = #86c1b9
-color15 = #f8f8f8
+color0  = #1B2B34
+color1  = #EC5f67
+color2  = #99C794
+color3  = #FAC863
+color4  = #6699CC
+color5  = #C594C5
+color6  = #5FB3B3
+color7  = #C0C5CE
+color8  = #65737E
+color9  = #EC5f67
+color10 = #99C794
+color11 = #FAC863
+color12 = #6699CC
+color13 = #C594C5
+color14 = #5FB3B3
+color15 = #D8DEE9
 
 # 256 color space
-color16 = #dc9656
-color17 = #a16946
-color18 = #282828
-color19 = #383838
-color20 = #b8b8b8
-color21 = #e8e8e8
+color16 = #F99157
+color17 = #AB7967
+color18 = #343D46
+color19 = #4F5B66
+color20 = #A7ADBA
+color21 = #CDD3DE

@@ -55,7 +55,7 @@ export GEM_HOME GEM_PATH
 
 PATH=$HOME/.local/bin:/usr/local/heroku/bin:$PATH:$GEM_HOME/bin
 EDITOR=vim
-TERMINAL=urxvt
+TERMINAL=termite
 BROWSER=firefox
 export PATH EDITOR TERMINAL BROWSER
 

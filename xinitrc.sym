@@ -35,14 +35,23 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 xset +fp /usr/share/fonts/local
-xsetroot -cursor_name left_ptr
 
-feh --bg-scale "$wallpaper"
+xsetroot -cursor_name left_ptr -solid '#1B2B34'
+# feh --bg-scale "$wallpaper"
+# xcompmgr -c -C &
 
-xcompmgr -c -C &
+# xclock -geometry "162x162-15+15" &
 
+# Stacking
+# exec twm
+# exec fvwm
+# exec openbox-session
+
+# Tiling
+# exec i3
 exec bspwm
 # exec herbstluftwm --locked
+# exec notion
+
+# DE
 # exec xfce4-session
-# exec i3
-# exec openbox-session

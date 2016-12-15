@@ -12,13 +12,14 @@ green="$(getXresColor color2)"
 blue="$(getXresColor color4)"
 white="$(getXresColor color7)"
 
-font='-*-ttyp0-medium-r-*-*-14-*-*-*-*-*-iso10646-*'
+fixed_font='-*-ttyp0-medium-r-*-*-14-*-*-*-*-*-iso10646-*'
+scaled_font="sans"
 
 # rofi
 rofi -show run -fullscreen \
     -opacity 87 \
     -padding 400 \
-    -font "sans 28" \
+    -font "$scaled_font 20" \
     -color-window "$background, $background, $background" \
     -color-normal "$background, $foreground, $background, $blue, $foreground" \
     -color-active "$background, $green, $background, $green, $foreground" \
