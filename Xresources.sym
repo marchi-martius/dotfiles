@@ -1,5 +1,4 @@
 #include ".Xresources.d/fonts"
 #include ".Xresources.d/rxvt-unicode"
-#include "/usr/share/base16/xresources/base16-default.light.xresources"
+#include "/usr/share/base16/xresources/base16-oceanicnext.dark.256.xresources"
 
-Xcursor.theme: FlatbedCursors.Black.Small

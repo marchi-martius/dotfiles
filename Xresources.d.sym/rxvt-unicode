@@ -1,7 +1,9 @@
+! vim: ft=xdefaults
+
 URxvt.cursorBlink:      false
 URxvt.scrollBar:        false
 URxvt.saveLines:        4096
-URxvt.internalBorder:   12
+!URxvt.internalBorder:   12
 URxvt.letterSpace:      true
 
 URxvt.perl-ext: default,url-select,font-size,clipboard,background

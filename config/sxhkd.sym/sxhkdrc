@@ -8,7 +8,7 @@ getXresColor() {
 
 # terminal emulator
 super + Return
-	termite
+	$TERMINAL
 
 # program launcher
 super + space

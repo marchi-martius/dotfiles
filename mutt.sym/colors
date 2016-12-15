@@ -6,9 +6,9 @@ color signature white brightblack
 color attachment white brightblack
 color prompt default default
 color message default default
-color error white red
+color error black red
 color indicator green default
-color status white green
+color status black green
 color tree default default
 color normal default default
 color markers red default

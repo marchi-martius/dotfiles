@@ -6,16 +6,23 @@ getXresColor() {
 
 background="$(getXresColor background)"
 foreground="$(getXresColor foreground)"
+
 red="$(getXresColor color1)"
 green="$(getXresColor color2)"
 blue="$(getXresColor color4)"
 white="$(getXresColor color7)"
 
+font='-*-ttyp0-medium-r-*-*-14-*-*-*-*-*-iso10646-*'
+
+# rofi
 rofi -show run -fullscreen \
     -opacity 87 \
     -padding 400 \
-    -font "sans 20" \
+    -font "sans 28" \
     -color-window "$background, $background, $background" \
     -color-normal "$background, $foreground, $background, $blue, $foreground" \
     -color-active "$background, $green, $background, $green, $foreground" \
     -color-urgent "$background, $red, $background, $red, $foreground"
+
+# dmenu
+#dmenu_run -nb "$background" -nf "$foreground" -fn "$font"
