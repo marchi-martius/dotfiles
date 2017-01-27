@@ -140,17 +140,18 @@ super + button{1-3}
 super + @button{1-3}
 	bspc pointer -u
 
-#
-# custom launchers
-#
+# Run urxvt with Mutt
 super + shift + r
     urxvt -name mutt -e mutt
 
+# Run browser
 super + shift + f
     firefox
 
+# Adjast volume by +/- 3%
 super + shift + {u,d}
     ponymix {increase,decrease} 3
 
+# Toggle cmus player
 super + shift + p
-    mpc toggle
+    cmus-remote -u

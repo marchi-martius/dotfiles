@@ -49,18 +49,13 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 complete -C aws_completer aws
 
 # Env variables
-GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
-GEM_PATH=$GEM_HOME
-export GEM_HOME GEM_PATH
-
-PATH=$HOME/.local/bin:/usr/local/heroku/bin:$PATH:$GEM_HOME/bin
-EDITOR=vim
-TERMINAL=termite
-BROWSER=firefox
-export PATH EDITOR TERMINAL BROWSER
-
-WINEPREFIXES="$HOME/.local/share/wineprefixes"
-export WINEPREFIXES
+export GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
+export GEM_PATH=$GEM_HOME
+export PATH=$HOME/.local/bin:/usr/local/heroku/bin:$PATH:$GEM_HOME/bin
+export WINEPREFIXES="${HOME}/.local/share/wineprefixes"
+export EDITOR=vim
+export TERMINAL=termite
+export BROWSER=firefox
 
 # Add default SSH key to ring
 if [ -z $SSH_AUTH_SOCK ]
@@ -85,6 +80,7 @@ alias gst="git status"
 alias hpr="hub pull-request"
 
 alias ai="cd ~/src/agentinbox/agentinbox"
+alias oa="cd ~/src/eduvo/openapply"
 alias sbs="cd ~/src/marchi-martius/superbookshop"
 alias bld="cd ~/src/cower"
 
