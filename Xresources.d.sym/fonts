@@ -11,3 +11,4 @@ Xft.antialias: true
 !*.font: -lucy-tewi-medium-r-*-*-11-*-*-*-c-*-iso10646-1
 !*.font: -gohu-gohufont-medium-r-*-*-11-*-*-*-*-*-iso10646-1
 
+Emacs.font: monospace-11
