@@ -1,5 +1,5 @@
 macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
 
-macro generic <esc>1 '<enter-command>source ~/.mutt/personal<enter><change-folder>!<enter>'
+macro generic <esc>1 '<enter-command>source ~/.mutt/mm<enter><change-folder>!<enter>'
 macro generic <esc>2 '<enter-command>source ~/.mutt/jt<enter><change-folder>!<enter>'
-macro generic <esc>3 '<enter-command>source ~/.mutt/ai<enter><change-folder>!<enter>'
+macro generic <esc>3 '<enter-command>source ~/.mutt/mb<enter><change-folder>!<enter>'

@@ -23,9 +23,9 @@ source "~/.mutt/macros"
 source "~/.mutt/jt"
 folder-hook $folder 'source ~/.mutt/jt'
 
-source "~/.mutt/ai"
-folder-hook ~/.mail/ai/* 'source ~/.mutt/ai'
+source "~/.mutt/mb"
+folder-hook ~/.mail/mb/* 'source ~/.mutt/mb'
 
-source "~/.mutt/personal"
-folder-hook ~/.mail/personal/* 'source ~/.mutt/personal'
+source "~/.mutt/mm"
+folder-hook ~/.mail/mm/* 'source ~/.mutt/mm'
 

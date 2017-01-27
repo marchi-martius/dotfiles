@@ -1,6 +1,6 @@
-set from="marchi.martius@gmail.com"
+set from="mark.volosiuk@managebac.com"
 
-set folder=~/.mail/personal
+set folder=~/.mail/mb
 
 set spoolfile=+Inbox
 set postponed=+[Gmail]/Drafts
