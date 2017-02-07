@@ -83,10 +83,3 @@ alias ai="cd ~/src/agentinbox/agentinbox"
 alias oa="cd ~/src/eduvo/openapply"
 alias sbs="cd ~/src/marchi-martius/superbookshop"
 alias bld="cd ~/src/cower"
-
-# Functions
-
-# Pastebin: ptpb.pw
-pb () {
-    curl -F "c=@${1:--}" http://ptpb.pw/
-}
