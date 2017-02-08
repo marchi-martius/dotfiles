@@ -36,7 +36,7 @@ fi
 
 xset +fp /usr/share/fonts/local
 
-xsetroot -cursor_name left_ptr -solid '#1B2B34'
+xsetroot -cursor_name left_ptr -solid '#ffffff'
 # feh --bg-scale "$wallpaper"
 # xcompmgr -c -C &
 
