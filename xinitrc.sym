@@ -45,6 +45,7 @@ xsetroot -cursor_name left_ptr -solid '#ffffff'
 # Stacking
 # exec twm
 # exec fvwm
+# exec jwm
 # exec openbox-session
 
 # Tiling
