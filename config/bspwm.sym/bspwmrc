@@ -7,7 +7,7 @@ getXresColor() {
 sxhkd -m -1 &
 panel &
 
-bspc config border_width   1
+bspc config border_width   2
 bspc config window_gap     8
 
 bspc config split_ratio          0.52
