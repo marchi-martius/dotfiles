@@ -136,3 +136,17 @@
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (jsx-mode zenburn-theme yaml-mode web-mode use-package scss-mode sass-mode rspec-mode projectile-rails magit-gh-pulls leuven-theme helm-projectile helm-fuzzy-find helm-ag haskell-mode go-mode flycheck fill-column-indicator exec-path-from-shell elixir-mode coffee-mode chruby auto-complete ag))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
