@@ -39,7 +39,6 @@ then
     source /etc/profile.d/vte.sh
 fi
 
-
 # Color scheme
 
 BASE16_SHELL=$HOME/.config/base16-shell/
@@ -57,12 +56,7 @@ export EDITOR=vim
 export TERMINAL=termite
 export BROWSER=firefox
 
-# Add default SSH key to ring
-if [ -z $SSH_AUTH_SOCK ]
-then
-    eval `ssh-agent -s`
-    ssh-add
-fi
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # Aliases
 alias ls="ls --color=auto"
