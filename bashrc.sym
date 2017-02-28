@@ -50,9 +50,14 @@ complete -C aws_completer aws
 # Env variables
 export GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
 export GEM_PATH=$GEM_HOME
+
+export GOPATH="$HOME"/src/go
+export GOBIN="$HOME"/.local/bin
+
 export PATH=$HOME/.local/bin:/usr/local/heroku/bin:$PATH:$GEM_HOME/bin
 export WINEPREFIXES="${HOME}/.local/share/wineprefixes"
-export EDITOR=vim
+export VISUAL=vim
+export EDITOR="${VISUAL}"
 export TERMINAL=termite
 export BROWSER=firefox
 
