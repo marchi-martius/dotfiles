@@ -1,8 +1,8 @@
 #! /bin/bash
 
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=24
-PANEL_FONT="Lato:size=9:style=Semibold"
+PANEL_HEIGHT=30
+PANEL_FONT="Lato:size=9:style=Bold"
 #PANEL_FONT="-gohu-gohufont-medium-*-*-*-14-*-*-*-*-*-iso10646-1"
 #PANEL_FONT="-uw-ttyp0-bold-r-*-*-14-*-*-*-*-*-iso10646-1"
 PANEL_WM_NAME=bspwm_panel
