@@ -6,9 +6,10 @@ Xft.autohint: false
 Xft.rgba: rgb
 Xft.antialias: true
 
-*.font: xft:monospace:size=11:Regular
+*.font: xft:monospace:size=9:Regular
 !*.font: -*-ttyp0-medium-r-*-*-14-*-*-*-*-*-iso10646-*
 !*.font: -lucy-tewi-medium-r-*-*-11-*-*-*-c-*-iso10646-1
-!*.font: -gohu-gohufont-medium-r-*-*-11-*-*-*-*-*-iso10646-1
+!*font: -gohu-gohufont-medium-r-*-*-14-*-*-*-*-*-iso10646-1
+!*font: -gnu-unifont-medium-*-*-*-16-*-*-*-*-*-iso10646-1
 
-Emacs.font: monospace-11
+!Emacs.font: monospace-11

@@ -7,12 +7,12 @@ getXresColor() {
 background="$(getXresColor background)"
 foreground="$(getXresColor foreground)"
 
+black="$(getXresColor color0)"
 red="$(getXresColor color1)"
 green="$(getXresColor color2)"
 blue="$(getXresColor color4)"
 white="$(getXresColor color7)"
 
-fixed_font='-*-ttyp0-medium-r-*-*-14-*-*-*-*-*-iso10646-*'
 scaled_font="sans"
 
 # rofi
@@ -21,9 +21,14 @@ rofi -show run -fullscreen \
     -padding 400 \
     -font "$scaled_font 20" \
     -color-window "$background, $background, $background" \
-    -color-normal "$background, $foreground, $background, $blue, $foreground" \
+    -color-normal "$background, $foreground, $background, $blue, $black" \
     -color-active "$background, $green, $background, $green, $foreground" \
     -color-urgent "$background, $red, $background, $red, $foreground"
 
 # dmenu
-#dmenu_run -nb "$background" -nf "$foreground" -fn "$font"
+#dmenu_run -nb "$background" \
+#          -nf "$foreground" \
+#          -sb "$green" \
+#          -sf "$background" \
+#          -fn "$PANEL_FONT" \
+#          -h "$PANEL_HEIGHT"
