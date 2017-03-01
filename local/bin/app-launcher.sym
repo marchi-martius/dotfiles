@@ -13,7 +13,7 @@ green="$(getXresColor color2)"
 blue="$(getXresColor color4)"
 white="$(getXresColor color7)"
 
-scaled_font="sans"
+scaled_font="Input Sans"
 
 # rofi
 rofi -show run -fullscreen \
@@ -21,9 +21,9 @@ rofi -show run -fullscreen \
     -padding 400 \
     -font "$scaled_font 20" \
     -color-window "$background, $background, $background" \
-    -color-normal "$background, $foreground, $background, $blue, $black" \
-    -color-active "$background, $green, $background, $green, $foreground" \
-    -color-urgent "$background, $red, $background, $red, $foreground"
+    -color-normal "$background, $foreground, $background, $green, $black" \
+    -color-active "$background, $green, $background, $green, $black" \
+    -color-urgent "$background, $red, $background, $red, $black"
 
 # dmenu
 #dmenu_run -nb "$background" \

@@ -1,42 +1,39 @@
 [options]
+allow_bold = true
 font = monospace 9
+urgent_on_bold = true
 
 [colors]
+# Base16 harmonic16
+# Scheme: Jannik Siebert (https://github.com/janniks)
 
-# special
-foreground      = #eeebff
-foreground_bold = #eeebff
-cursor          = #eeebff
-background      = #2a2734
+foreground      = #cbd6e2
+foreground_bold = #cbd6e2
+cursor          = #cbd6e2
+background      = #0b1c2c
 
-# black
-color0  = #363342
-color8  = #545167
+# 16 color space
+color0  = #0b1c2c
+color1  = #bf8b56
+color2  = #56bf8b
+color3  = #8bbf56
+color4  = #8b56bf
+color5  = #bf568b
+color6  = #568bbf
+color7  = #cbd6e2
+color8  = #627e99
+color9  = #bf8b56
+color10 = #56bf8b
+color11 = #8bbf56
+color12 = #8b56bf
+color13 = #bf568b
+color14 = #568bbf
+color15 = #f7f9fb
 
-# red
-color1  = #b37537
-color9  = #cb823a
-
-# green
-color2  = #7c756e
-color10 = #90877f
-
-# yellow
-color3  = #ffa142
-color11 = #ffad5c
-
-# blue
-color4  = #6a51e6
-color12 = #7a63ee
-
-# magenta
-color5  = #8a75f5
-color13 = #9a86fd
-
-# cyan
-color6  = #a19991
-color14 = #b2aba4
-
-# white
-color7  = #a4a1b5
-color15 = #bab8c7
+# 256 color space
+color16 = #bfbf56
+color17 = #bf5656
+color18 = #223b54
+color19 = #405c79
+color20 = #aabcce
+color21 = #e5ebf1
