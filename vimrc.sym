@@ -21,6 +21,8 @@ endif
 
 syntax on
 
+set background=dark
+
 set nocompatible
 
 set relativenumber
@@ -55,6 +57,8 @@ set winwidth=110
 set encoding=utf-8
 
 set omnifunc=syntaxcomplete#Complete
+
+colorscheme marchi
 
 nnoremap <Leader>t :FZF<cr>
 
@@ -113,7 +117,7 @@ endfunction
 
 command! Tags call s:tags()
 
-if filereadable(expand("~/.vimrc_background"))
-    let base16colorspace=256
-    source ~/.vimrc_background
-endif
+" if filereadable(expand("~/.vimrc_background"))
+"     let base16colorspace=256
+"     source ~/.vimrc_background
+" endif
