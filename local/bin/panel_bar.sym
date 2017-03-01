@@ -20,14 +20,14 @@ while read -r line ; do
             # Unread mail
             if [ -n "${line#?}" ]
             then
-                mail="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG}%{A:email:} ${line#?} %{A}%{B-}%{F-}|"
+                mail="%{F$COLOR_MAIL_FG}%{B$COLOR_MAIL_BG}%{A:email:} ${line#?} %{A}%{B-}%{F-}"
             else
                 mail=""
             fi
             ;;
         L*)
             # Current keyboard layout
-			layout="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}|"
+			layout="%{F$COLOR_KB_FG}%{B$COLOR_KB_BG} ${line#?} %{B-}%{F-}"
             ;;
 		W*)
 			# bspwm's state
@@ -98,5 +98,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-    printf "%s\n" "%{l}%{O30}${wm}%{c}${title}%{r}%{O8}${mail}${layout}${sys}%{O30}"
+    printf "%s\n" "%{l}%{O30}${wm}%{O8}%{c}${title}%{r}%{O8}${mail}${sys}${layout}%{O30}"
 done

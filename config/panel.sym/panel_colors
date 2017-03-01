@@ -2,6 +2,18 @@ getXresColor() {
     echo -n "$( xrdb -query | grep "\*$1:" | grep -oE "#[a-zA-Z0-9]{6}" )";
 }
 
+black="$(getXresColor color0)"
+red="$(getXresColor color1)"
+green="$(getXresColor color2)"
+yellow="$(getXresColor color3)"
+blue="$(getXresColor color4)"
+magenta="$(getXresColor color5)"
+cyan="$(getXresColor color6)"
+grey="$(getXresColor color7)"
+
+darkgrey="$(getXresColor color8)"
+white="$(getXresColor color15)"
+
 COLOR_DEFAULT_FG="$(getXresColor foreground)"
 COLOR_DEFAULT_BG="$(getXresColor background)"
 
@@ -10,26 +22,32 @@ COLOR_MONITOR_BG="$COLOR_DEFAULT_BG"
 COLOR_FOCUSED_MONITOR_FG="$COLOR_DEFAULT_FG"
 COLOR_FOCUSED_MONITOR_BG="$COLOR_DEFAULT_BG"
 
-COLOR_FREE_FG="$(getXresColor color8)"
+COLOR_FREE_FG="${darkgrey}"
 COLOR_FREE_BG="$COLOR_DEFAULT_BG"
-COLOR_FOCUSED_FREE_FG="$(getXresColor color8)"
-COLOR_FOCUSED_FREE_BG="$(getXresColor color2)"
+COLOR_FOCUSED_FREE_FG="$COLOR_FREE_FG"
+COLOR_FOCUSED_FREE_BG="${green}"
 
 COLOR_OCCUPIED_FG="$COLOR_DEFAULT_FG"
 COLOR_OCCUPIED_BG="$COLOR_FREE_BG"
-COLOR_FOCUSED_OCCUPIED_FG="$(getXresColor color0)"
+COLOR_FOCUSED_OCCUPIED_FG="${black}"
 COLOR_FOCUSED_OCCUPIED_BG="$COLOR_FOCUSED_FREE_BG"
 
-COLOR_URGENT_FG="$(getXresColor color15)"
-COLOR_URGENT_BG="$(getXresColor color1)"
+COLOR_URGENT_FG="${white}"
+COLOR_URGENT_BG="${red}"
 COLOR_FOCUSED_URGENT_FG="$COLOR_URGENT_FG"
 COLOR_FOCUSED_URGENT_BG="$COLOR_FOCUSED_OCCUPIED_BG"
 
-COLOR_STATE_FG="$(getXresColor color3)"
+COLOR_STATE_FG="${darkgrey}"
 COLOR_STATE_BG="$COLOR_DEFAULT_BG"
 
 COLOR_TITLE_FG="$COLOR_DEFAULT_FG"
 COLOR_TITLE_BG="$COLOR_DEFAULT_BG"
+
+COLOR_MAIL_FG="${black}"
+COLOR_MAIL_BG="${red}"
+
+COLOR_KB_FG="${black}"
+COLOR_KB_BG="${green}"
 
 COLOR_SYS_FG="$COLOR_DEFAULT_FG"
 COLOR_SYS_BG="$COLOR_DEFAULT_BG"
