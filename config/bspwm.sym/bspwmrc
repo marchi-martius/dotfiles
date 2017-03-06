@@ -29,6 +29,7 @@ bspc rule -a 'Pale moon' desktop=Web follow=on
 bspc rule -a URxvt:mutt desktop=Chat
 bspc rule -a Skype desktop=Chat
 bspc rule -a Slack desktop=Chat
+bspc rule -a Chromium:crx_bikioccmkafdpakkkcpdbppfkghcmihk desktop=Chat # Signal Private messanger
 
 bspc rule -a Gimp desktop=Media state=floating follow=on
 bspc rule -a MPlayer desktop=Media state=floating follow=on
