@@ -5,6 +5,7 @@
 . $HOME/.config/panel/panel_colors
 
 num_mon=$(bspc query -M | wc -l)
+mail_url='https://mail.google.com'
 
 while read -r line ; do
 	case $line in
@@ -20,7 +21,7 @@ while read -r line ; do
             # Unread mail
             if [ -n "${line#?}" ]
             then
-                mail="%{F$COLOR_MAIL_FG}%{B$COLOR_MAIL_BG}%{A:email:} ${line#?} %{A}%{B-}%{F-}"
+                mail="%{F$COLOR_MAIL_FG}%{B$COLOR_MAIL_BG}%{A:firefox "${mail_url}":} ${line#?} %{A}%{B-}%{F-}"
             else
                 mail=""
             fi
