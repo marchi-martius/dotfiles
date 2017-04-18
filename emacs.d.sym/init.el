@@ -15,7 +15,6 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/etc")
 
 (require 'package)
@@ -28,62 +27,21 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(require 'web-mode-indent-hook)
+(require 'ido)
+(ido-mode t)
+
 (require 'default-frame)
 (require 'tags)
-
-(use-package exec-path-from-shell
-  :if window-system
-  :config
-  (exec-path-from-shell-initialize))
-
-(use-package helm
-  :init
-  (require 'helm-config)
-  :config
-  (helm-mode 1)
-  :bind
-  ("M-x" . helm-M-x))
-
-(use-package helm-fuzzy-find)
 
 (use-package flycheck
   :config
   (global-flycheck-mode))
 
-(use-package chruby
-  :init
-  (add-hook 'projectile-after-switch-project-hook #'chruby-use-corresponding)
-  :config
-  (chruby-use "2.3.1"))
-
-(use-package projectile
-  :config
-  (projectile-global-mode 1))
-
-(use-package helm-projectile
-  :init
-  (setq projectile-completion-system 'helm)
-  :config
-  (helm-projectile-on))
-
-(use-package projectile-rails
-  :init
-  (setq projectile-rails-vanilla-command "bin/rails")
-  (setq projectile-rails-spring-command "bin/spring")
-  (add-hook 'projectile-mode-hook 'projectile-rails-on))
-
 (use-package ag)
-
-(use-package helm-ag)
 
 (use-package inf-ruby
   :config
   (inf-ruby-switch-setup))
-
-(use-package fill-column-indicator
-  :init
-  (setq fci-rule-column 110))
 
 (use-package auto-complete
   :init
@@ -93,11 +51,7 @@
 
 (use-package magit
   :bind
-  ("C-x g" . magit-status))
-
-(use-package magit-gh-pulls
-  :init
-  (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls))
+  ("C-c g" . magit-status))
 
 (use-package go-mode
   :init
@@ -111,12 +65,13 @@
 
 (use-package web-mode
   :init
-  (add-hook 'web-mode-hook 'marcho-web-mode-indent))
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2))
 
 (use-package rspec-mode)
 
 (use-package coffee-mode
-  :init
+  :config
   (setq coffee-tab-width 2))
 
 (use-package yaml-mode)
