@@ -19,7 +19,7 @@
 
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
+	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -48,6 +48,10 @@
   (require 'auto-complete-config)
   :config
   (ac-config-default))
+
+(use-package ac-etags
+  :config
+  (ac-etags-setup))
 
 (use-package magit
   :bind
@@ -98,7 +102,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (jsx-mode zenburn-theme yaml-mode web-mode use-package scss-mode sass-mode rspec-mode projectile-rails magit-gh-pulls leuven-theme helm-projectile helm-fuzzy-find helm-ag haskell-mode go-mode flycheck fill-column-indicator exec-path-from-shell elixir-mode coffee-mode chruby auto-complete ag))))
+    (ac-etags jsx-mode zenburn-theme yaml-mode web-mode use-package scss-mode sass-mode rspec-mode projectile-rails magit-gh-pulls leuven-theme helm-projectile helm-fuzzy-find helm-ag haskell-mode go-mode flycheck fill-column-indicator exec-path-from-shell elixir-mode coffee-mode chruby auto-complete ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
